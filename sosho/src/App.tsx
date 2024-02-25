@@ -16,11 +16,13 @@ import SignupForms from './forms/SignupForm';
 function App() {
   return (
     <div className="App">
+      <ProfileSection />
+
     <Header />
     <SearchSection />
     <OtherProfiles />
     <ChatSection /> 
-    <ProfileSection />
+    
     <MemeSection />
     <SigninForms />
     <SignupForms />
