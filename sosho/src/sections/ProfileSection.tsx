@@ -9,7 +9,21 @@ const ProfileSection = ({ userId }) => {
     const fetchUserData = async () => {
       try {
         const response = await axios.get(`https://your-api-url.com/users/${userId}`);
-        setUser(response.data);
+       // setUser(response.data); 
+       //maybe next time
+          setUser({
+    userId: userId,
+    profilePicture: 'https://example.com/profile-picture.jpg',
+    username: `user_${userId}`,
+    name: `User ${userId}`,
+    bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    birthday: '1990-01-01',
+    dateJoined: '2022-01-01',
+    email: `user${userId}@example.com`,
+    phone: '123-456-7890',
+    lastSeen: '2024-02-26T12:30:00Z', // Use the current timestamp for realism
+  });
+        
       } catch (error) {
         console.error('Error fetching user data:', error);
       }
