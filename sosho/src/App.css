@@ -1,0 +1,324 @@
+/*
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+*/
+
+   /*testing*/
+   #profile,#chat,#meme{
+    display:none;
+}
+/*just generally,for unspecified paddings and margins*/
+     *{
+         margin:0;
+         padding:0;
+         color:white;
+         border:0.5px solid red;
+         border-radius:5vw;
+         background-color:#101012;
+         text-align:center;
+         padding-top:auto;
+         padding-bottom:auto;
+         position:relative;
+         border:0 !important;
+         max-width:100vw;
+         justify-content:center;
+         align-items:center;
+/*search for how to align shit center vertically */
+     }
+     
+     #main{
+         
+         height:100vh;
+         width:100vw;
+         position: fixed;
+         overflow-y:none;
+       
+     }
+     
+     .inner-content{
+         border:2px solid white;
+         overflow:scroll;
+     }
+     
+     .heading{
+         height:10vh;
+         display:flex;
+     }
+     
+     .content{
+         height:80vh;
+     }
+     #bottom-nav{
+         height:10vh;
+     }
+     h1{
+         font-size:20px;
+             width:90vw;
+         }
+     h2,h3,h4,h5,p{
+         text-align:left;
+     }
+    
+        
+    
+        
+         
+     
+     /*for you */
+     .profiles-div{
+          height:15vh;
+        
+         margin:2vh 0 2vh 0;
+ width:100vw; /* Set the width of the container */
+ overflow-x: auto; /* Enable horizontal scrolling */
+ white-space: nowrap; /* Prevent line breaks */
+ /* Optional: Just for visualization */
+}
+
+.profile {
+ display: inline-block; /* Display divs in a row */
+ /* Set the width of each div */
+  /* Set the height of each div */
+ margin-right: 10px; /* Add margin for spacing between divs */
+  /* Optional: Just for visualization */
+}
+     /*for you */
+     .prohfile{
+         margin: 0 2px;
+         padding:2px;
+         
+     }
+     .profile-pic{
+         width:17vw;
+         height:17vw;
+         border-radius:50%;
+         margin:5px;
+         margin-top:3px;
+     }
+     .vid-image{
+         width:100%;
+     }
+     #video-div{
+                 display:grid;
+      grid-template-columns:repeat(2,1fr);
+       
+    
+         
+      
+        gap:3vw;
+         
+         
+     }
+     
+     .vid{
+         border:3px solid white;
+         width:48vw;
+         text-align:left;
+         
+     }
+     .vid p {
+         font-size:70%;
+         color:#999;
+     }
+     /*just testing*/
+     .vid   {
+      
+       /*  background-image:url(http://bear.jpg); //find out how*/
+     }
+     
+     
+     /*
+     bottom nav
+     */
+     #bottom-nav{
+      /*   position:sticky;
+         bottom:0;  */
+         display:flex;
+         
+     }
+     
+     #bottom-nav div {
+       width:25vw;
+       padding:auto;
+       padding-top:3%;
+         border:1px solid red;
+     }
+     .top-nav{
+         display:flex;
+         align-items:left;
+         border:1px solid gray;
+     }
+     .top-nav div {
+       width:  70vw;
+       padding-top:5vw;
+       
+       text-align:center;
+     }
+     .myprofile{
+      display:flex;   
+     }
+     .myprofile img, .myprofile div{
+         width:45%;
+         
+     }
+     .myprofile div{
+       padding-left:10vw;
+     }
+     .myprofile img{
+         border-radius:50%;
+         width:35vw;
+         height:35vw;
+     }
+     .smalltext{
+         color:grey;
+         font-size:80%;
+     }
+     .followbutton{
+         background-color:#303040;
+         padding:8px;
+         border-width:1px;
+         margin:5vw;
+         width:95vw;
+     }
+     .tags{
+         disprlay:flex;
+         width:100vw;
+         align-items:left;
+         
+     }
+     .tags button{
+         
+         padding:6px;
+         margin:6px;
+         background-color:#303040;
+     }
+     .followersandlikes{
+         display:flex;
+         align-items:justify;
+     }
+     .followersandlikes div {
+     width: 30%;
+       
+       padding:1.5vw;
+       margin:0.125vw;
+       border: 1px solid #303040;
+       
+     }
+   /*dead*/  .padded{
+         margin:5vw;
+         margin-left:2vw;
+         font-size:100%;
+     }
+    .postsandcollectionsheader{
+        display:flex;
+        align-items:center;
+        margin-top:5vh;
+    }
+    .postsandcollectionsheader div{
+        width:50vw;
+        
+    }
+     .postsandcollectionsheader div h3{
+         text-align:center;
+     }
+    .search-bar{
+        height:8vh;
+        background-color:#303040;
+        display:flex;
+       
+    }
+    .searchbar div{
+        width:15%;
+    }
+    .search-bar .searchinput{
+        width:80%;
+        background-color:transparent;
+        color:white;
+        border:0;
+        height:90%;
+        min-height:90%;
+        margin-left:5%;
+    }
+   .chat-header{
+       display:flex;
+       margin-bottom:1vh;
+   }
+    .chat-header img{
+       height:14vw;
+       width:14vw;
+       border-radius:50%;
+       margin-right:3vw;
+   }
+    .chat-header .about-user{
+       width:63vw;
+       text-align:left;
+   }
+    .chat-header .time{
+       width:10vw;
+   }
+   
+   .memediv{
+      
+   }
+   .memediv img{
+       height:90vw;
+       width:90vw;
+   }
+   .memediv {
+       
+   }
+   .likeandcomment{
+       display:flex;
+       padding-top:1.5vh;   
+   }
+   .likeandcomment div {
+       width:20vw;
+       border:1px solid red;
+   }
+ 
+ .logindiv, .signupdiv{
+     padding:2vh;
+     margin:5vh;
+     background-color:#202030;
+ }
+ .logindiv form, .signupdiv form  {
+     text-align:left;
+     background-color:transparent;
+ }
