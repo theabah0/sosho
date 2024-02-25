@@ -14,9 +14,10 @@ import SignupForms from './forms/SignupForm';
 
 
 function App() {
+  const user=3;
   return (
     <div className="App">
-      <ProfileSection />
+      <ProfileSection userId={user}/>
 
     <Header />
     <SearchSection />
