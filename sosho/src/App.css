@@ -39,7 +39,9 @@
 }
 
 */
-
+*{
+    border:1px silod red;
+}
    /*testing*/
    #profile,#chat,#meme{
     display:none;
@@ -49,14 +51,14 @@
          margin:0;
          padding:0;
          color:white;
-         border:0.5px solid red;
+         border:0.5px solid rgba(136, 255, 100,0.2);
          border-radius:5vw;
          background-color:#101012;
          text-align:center;
          padding-top:auto;
          padding-bottom:auto;
          position:relative;
-         border:0 !important;
+         
          max-width:100vw;
          justify-content:center;
          align-items:center;
