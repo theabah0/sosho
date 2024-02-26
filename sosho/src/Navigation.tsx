@@ -1,23 +1,27 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-function Navigation() {
-  const history = useHistory();
+const Navigation = () => {
+  const navigate = useNavigate();
 
   const goBack = () => {
-    history.goBack();
+    navigate(-1); // Equivalent to history.goBack()
   };
 
   const goForward = () => {
-    history.goForward();
+    navigate(1); // Equivalent to history.goForward()
   };
 
   return (
-    <div>
-      <button onClick={goBack}>Back</button>
-      <button onClick={goForward}>Forward</button>
+    <div className="navigation">
+      <button className="navigation-button" onClick={goBack}>
+        Back
+      </button>
+      <button className="navigation-button" onClick={goForward}>
+        Forward
+      </button>
     </div>
   );
-}
+};
 
 export default Navigation;

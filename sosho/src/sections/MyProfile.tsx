@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 interface User {
   profilePicture: string;
@@ -12,7 +12,7 @@ interface User {
   lastSeen: string;
 }
 
-const ProfileSection = ({ userId }: { userId?: string }) => {
+const MyProfile = ({ userId }: { userId?: string }) => {
   // Define the initial state with a default User object
   const [user, setUser] = useState<User>({
     profilePicture: 'https://example.com/profile-picture.jpg',
@@ -86,4 +86,4 @@ const ProfileSection = ({ userId }: { userId?: string }) => {
   );
 };
 
-export default ProfileSection;
+export default MyProfile;
