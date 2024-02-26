@@ -1,35 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Header from './sections/Header'
-import SearchSection from './sections/SearchSection';
-import OtherProfiles from './sections/OtherProfiles';
-import ChatSection from './sections/chat/ChatSection';
-import ProfileSection from './sections/ProfileSection';
-import MemeSection from './sections/MemeSection';
-import SigninForms from './forms/SigninForm';
-import SignupForms from './forms/SignupForm';
-
-
-
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Navigation from './Navigation';
+import ChatSection from './sections/chat/Chatsection'
+import ProfileSection from './sections/Profilesection'; // Example: Import your About component
 
 function App() {
-  const userId="h ";
   return (
-    <div className="App">
-      <ProfileSection userId={userId}/>
-
-    <Header />
-    <SearchSection />
-    <OtherProfiles />
-    <ChatSection /> 
-     
-    <MemeSection />
-    <SigninForms />
-    <SignupForms />
-    </div>
+    <Router>
+      <div>
+        <Navigation />
+        <Switch>
+          <Route path="/chat" component={Chatsection} />
+          <Route path="/" component={ProfileSection} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
-
 
 export default App;
