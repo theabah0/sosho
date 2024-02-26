@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 
 interface User {
   profilePicture: string;
@@ -13,7 +12,7 @@ interface User {
   lastSeen: string;
 }
 
-const ProfileSection = ({ userId }: { userId: string }) => {
+const ProfileSection = ({ userId }: { userId?: string }) => {
   // Define the initial state with a default User object
   const [user, setUser] = useState<User>({
     profilePicture: 'https://example.com/profile-picture.jpg',
@@ -29,9 +28,15 @@ const ProfileSection = ({ userId }: { userId: string }) => {
 
   useEffect(() => {
     const fetchUserData = async () => {
+      if (!userId) return; // Early exit if no userId provided
+
       try {
-        const response = await axios.get(`https://your-api-url.com/users/${userId}`);
-        setUser(response.data); // Set user state with actual data
+        const response = await fetch(`https://your-api-url.com/users/${userId}`);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        setUser(data); // Set user state with actual data
       } catch (error) {
         console.error('Error fetching user data:', error);
         // Consider additional error handling or fallback behavior here
