@@ -17,9 +17,10 @@ const Navigation = () => {
       <button className="navigation-button" onClick={goBack}>
         Back
       </button>
-      <button className="navigation-button" onClick={goForward}>
+      {/* 
+        <button className="navigation-button" onClick={goForward}>
         Forward
-      </button>
+      </button> */}
     </div>
   );
 };

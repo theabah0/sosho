@@ -1,9 +1,9 @@
 // App.tsx
 //import './App.css'
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import Navigation from './Navigation';
 import ChatSection from './sections/chat/ChatSection'
 import Home from './_root/pages/Home'; // Example: Import your About component
+import MyProfile from './sections/MyProfile';
 
 function App() {
  
@@ -14,10 +14,13 @@ function App() {
         
         <Routes>
           <Route path="/chat" element={<ChatSection/>} />
+          <Route path="/myprofile" element={<MyProfile/>} />
           <Route path="/" element={<Home/> } />
           </Routes>
-       <Navigation />
+       
        </div>
+
+
     </Router>
   );
 }

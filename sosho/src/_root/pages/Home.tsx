@@ -1,9 +1,17 @@
-import React from 'react'
 
+import Navigation from "../../Navigation"
+import { userIcon } from "../../icons/icons"
 const Home = () => {
+ 
   return (
-    <div>hellon</div>
+    <div>
+      <Navigation />
+      <a href="/myprofile" ><div>{userIcon() }</div></a>
+      <a href="/chat" ><div>{userIcon() }</div></a>
+      
+    </div>
   )
 }
 
 export default Home
+
